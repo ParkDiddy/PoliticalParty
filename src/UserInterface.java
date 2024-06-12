@@ -29,6 +29,9 @@ public class UserInterface {
         }
         // We'll see what party the user identifies with to store their responses in the relevant csv.
         String politicalParty = responseList.getPoliticalPartyResponse();
+        String filePath = responseList.getFilePath(politicalParty);
+        WriteFile writeFile = new WriteFile();
+        writeFile.writeFile(filePath, responseList.toString());
 //
 //        // Determine which party the user aligns with the most
 //        int max = democrat;

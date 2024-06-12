@@ -20,8 +20,8 @@ public class Response {
     public String getPoliticalPartyResponse() {
         return this.responseList.get(this.responseList.size() - 1);
     }
-    public void writeResponsesToCsv(String party) {
-        String filePath;
+    public String getFilePath(String party) {
+        String filePath = null;
         if (party.contains("Democrat")) {
             filePath = "democratResponses.csv";
         } else if (party.contains("Republican")) {
@@ -31,5 +31,6 @@ public class Response {
         } else if (party.contains("Green Party")) {
             filePath = "greenPartyResponses.csv";
         }
+        return filePath;
     }
 }
