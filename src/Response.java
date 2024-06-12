@@ -33,4 +33,8 @@ public class Response {
         }
         return filePath;
     }
+
+    public ArrayList<String> getResponseList() {
+        return this.responseList;
+    }
 }

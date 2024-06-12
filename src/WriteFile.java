@@ -4,7 +4,7 @@ import java.io.IOException;  // Import the IOException class to handle errors
 public class WriteFile {
     public void writeFile(String filePath, String content) {
         try {
-            FileWriter fileWriter = new FileWriter(filePath);
+            FileWriter fileWriter = new FileWriter(filePath, true);
             fileWriter.write(content);
             fileWriter.close();
             System.out.println("Successfully wrote to the file.");
